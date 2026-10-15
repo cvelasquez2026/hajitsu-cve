@@ -1,3 +1,5 @@
+import { CardValue, cardLabel } from './CardValue';
+
 interface CardProps {
   value?: string;
   /** Carta boca abajo (voto oculto). */
@@ -11,8 +13,8 @@ export function Card({ value, faceDown, empty, tone }: CardProps) {
   if (empty) return <div className="card card-empty" aria-label="Sin votar" />;
   if (faceDown) return <div className="card card-back" aria-label="Voto oculto" />;
   return (
-    <div className={`card card-face ${tone ?? ''}`} aria-label={`Voto ${value}`}>
-      {value}
+    <div className={`card card-face ${tone ?? ''}`} aria-label={`Voto ${cardLabel(value ?? '')}`}>
+      {value && <CardValue value={value} />}
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { CardValue, cardLabel } from './CardValue';
+
 interface CardDeckProps {
   cards: readonly string[];
   selected?: string;
@@ -13,10 +15,11 @@ export function CardDeck({ cards, selected, disabled, onPick }: CardDeckProps) {
           key={card}
           className={`deck-card ${selected === card ? 'is-selected' : ''}`}
           aria-pressed={selected === card}
+          aria-label={cardLabel(card)}
           disabled={disabled}
           onClick={() => onPick(card)}
         >
-          {card}
+          <CardValue value={card} />
         </button>
       ))}
     </div>

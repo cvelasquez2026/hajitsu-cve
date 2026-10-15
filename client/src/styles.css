@@ -543,3 +543,11 @@ input:focus {
     flex: 1;
   }
 }
+
+/* Gato negro dibujado en SVG: hereda el color del texto de la carta */
+.cat-icon {
+  width: 1.15em;
+  height: 1.15em;
+  display: block;
+  margin: 0 auto;
+}

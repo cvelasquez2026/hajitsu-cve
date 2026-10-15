@@ -8,7 +8,7 @@ Inspirada en [Hatjitsu](https://github.com/richarcher/Hatjitsu): sin login, con 
 - **Votación oculta**: los votos ajenos se muestran boca abajo hasta que el moderador pulsa **Revelar**, aunque ya hayan votado todos. El servidor **no envía** los valores antes de revelar.
 - **Modo observador**: puede ver la sala, pero no vota.
 - **Moderador** (quien crea la sala): revelar, ordenar votos y nueva ronda. El servidor valida un token secreto.
-- **Cartas**: un único mazo con 1, 2, 3, 5, 8, 13 y 🐈‍⬛ (gato negro, no numérico: no cuenta para el promedio).
+- **Cartas**: un único mazo con 1, 2, 3, 5, 8, 13 y un gato negro (no numérico: no cuenta para el promedio; se dibuja en SVG para que se vea igual en todos los navegadores).
 - **Resultados**: promedio y desviación estándar de las cartas numéricas, e indicador de consenso (verde: unánime, amarillo: sin unanimidad, rojo: votos dispersos).
 - **Reconexión**: al recargar (F5) se conserva el voto. Cada pestaña es un participante.
 - **Limpieza**: las salas sin conexiones se eliminan tras `ROOM_TTL_HOURS` horas de inactividad.
