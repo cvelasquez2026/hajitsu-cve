@@ -1,0 +1,26 @@
+{
+  "name": "hatjitsu-cve",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Planning Poker en tiempo real inspirado en Hatjitsu",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client && npm run build -w server",
+    "start": "node server/dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p server --noEmit && tsc -p client --noEmit",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "concurrently": "9.1.0",
+    "prettier": "3.4.2",
+    "socket.io-client": "4.8.1",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  }
+}
